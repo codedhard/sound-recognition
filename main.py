@@ -83,7 +83,6 @@ time.sleep( 1 )
 
 #pyaudio
 def ProcessSound( Prog , Prog_id=None ):
-	#crash()
 	global GA_NN_obj
 	#global ENERGY_init
 
@@ -136,8 +135,6 @@ def ProcessSound( Prog , Prog_id=None ):
 		else:
 			Prog.run( stream_data[wf_rand][i2] , wf_text[wf_rand] )
 
-	#Prog.Fitness=int(fitness)
-	#return fitness
 
 
 #https://people.csail.mit.edu/hubert/pyaudio/
@@ -148,14 +145,6 @@ CHUNK = 1024
 
 #CHUNK = 4096
 CHUNK = 2048
-"""
-			__data = ""
-			HOST, PORT = "localhost",90
-			__req = urllib2.Request(url="http://"+str(HOST)+":"+str(PORT)+"/",
-			data=str(__data) )
-			__f = urllib2.urlopen(__req)
-			__info=__f.read()
-"""
 
 def parseWAVE( filename ):
 	wf = wave.open( filename , 'rb')
